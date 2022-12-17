@@ -27,17 +27,17 @@ class PerroRequest extends FormRequest
     public function rules()
     {
         return [
-            "nombre" => "required",
-            "imagen" => "required",
-            "descripcion" => "required",
-            "id" => "perro,id,deleted_at,NULL",
+            "nombre" => "required|string",
+            "imagen" => "required|string",
+            "descripcion" => "required|string",
         ];
     }
 
     public function messages()
     {
         return [
-            'required' => 'El campo :attribute es requerido'
+            'required' => 'El campo :attribute es requerido',
+            'string' => 'El campo :attribute debe ser de tipo string'
         ];
     }
 
