@@ -79,7 +79,6 @@ Ruta: `/api/interacciones/agregar`
 
 ```json 
 {
-	
 	"perro_interesado_id": :id_perro_interesado,
 	"perro_candidato_id": :id_perro_candidato,
 	"preferencia": "A"
