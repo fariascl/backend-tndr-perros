@@ -66,10 +66,26 @@ Ruta: `/api/perros/eliminar`
 
 Método: **DELETE**
 
+```json
+{
+	"id": :id
+}
+```
+
 ## Interacciones 
 
 ### Agregar interacción
 Ruta: `/api/interacciones/agregar`
+
+```json 
+{
+	
+	"perro_interesado_id": :id_perro_interesado,
+	"perro_candidato_id": :id_perro_candidato,
+	"preferencia": "A"
+}
+```
+Por validaciones solo se permite "A" (aceptar) o "R" (rechazar), además, el id del perro interesado debe ser diferente al id del perro candidato
 
 Método: **POST**
 
