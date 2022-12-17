@@ -27,8 +27,8 @@ class InteraccionRequest extends FormRequest
     public function rules()
     {
         return [
-            "perro_candidato_id" => "required|different:perro_interesado_id|exists:perros,id",
-            "perro_interesado_id" => "required|different:perro_candidato_id|exists:perros,id",
+            "perro_candidato_id" => "required|integer|different:perro_interesado_id|exists:perros,id",
+            "perro_interesado_id" => "required|integer|different:perro_candidato_id|exists:perros,id",
             "preferencia" => "in:A,R"
         ];
     }
@@ -39,7 +39,8 @@ class InteraccionRequest extends FormRequest
             'required' => 'El campo :attribute es requerido',
             'in' => 'Preferencia no válida, solo A (aceptar) o R (rechazar)',
             'different' => 'Los campos deben ser diferentes',
-            'exists' => 'El id del perro \':attribute\' debe existir'
+            'exists' => 'El id del perro \':attribute\' debe existir',
+            'integer' => 'El campo debe \':attribute\' debe ser entero'
         ];
     }
 
