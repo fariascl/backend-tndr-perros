@@ -25,6 +25,8 @@ Allí, se procede a instalar los paquetes de laravel, que van adjuntos en el `pa
 
 Y para finalizar, se levanta con el comando `php artisan serve`
 
+Opcional: Puedes poblar la tabla `perros` a través del factory que fue creado, ejecutando el comando `php artisan db:seed`
+
 # Rutas
 
 ## Perro
