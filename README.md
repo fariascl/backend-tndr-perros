@@ -23,7 +23,19 @@ Allí, se procede a instalar los paquetes de laravel, que van adjuntos en el `pa
 
 `composer i`
 
-Y para finalizar, se levanta con el comando `php artisan serve`
+Después de instalar las dependencias, se procede a copiar y renombrar el archivo de `.env.example a .env` con el comando de a continuación:
+
+`cp .env.example .env`
+
+Con lo anterior realizado, se procede a modificar el archivo `.env` y a ingresar las credenciales de tu base de datos:
+
+```env
+DB_DATABASE=<nombre_base_datos>
+DB_USERNAME=<usuario_base_datos>
+DB_PASSWORD=<contraseña_base_datos>
+```
+
+Y para finalizar, se ejecutan las migraciones con el comando `php artisan migrate`, y terminado lo anterior, se levanta la API con el comando `php artisan serve`
 
 Opcional: Puedes poblar la tabla `perros` a través del factory que fue creado, ejecutando el comando `php artisan db:seed`
 
